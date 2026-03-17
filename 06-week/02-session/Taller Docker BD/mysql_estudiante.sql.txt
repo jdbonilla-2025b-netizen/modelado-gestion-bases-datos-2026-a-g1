@@ -1,0 +1,15 @@
+CREATE DATABASE laboratorio_docker;
+USE laboratorio_docker;
+
+CREATE TABLE estudiante (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    apellido VARCHAR(100) NOT NULL,
+    correo VARCHAR(150) UNIQUE,
+    edad INT
+);
+
+INSERT INTO estudiante (nombre, apellido, correo, edad)
+VALUES ('Juan', 'Perez', 'juanperez@correo.com', 22);
+
+SELECT * FROM estudiante;
